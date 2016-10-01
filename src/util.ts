@@ -63,7 +63,7 @@ export function fillConfigDefaults(context: BuildContext, config: any, task: Tas
     config = getConfigFileData(task.fullArgConfig, task.shortArgConfig, task.envConfig, null, context) || {};
   }
 
-  const defaultConfig = require(join('..', 'config', task.defaultConfigFilename));
+  const defaultConfig = require(join('./', 'config', task.defaultConfigFilename));
 
   // always assign any default values which were not already supplied by the user
   assignDefaults(config, defaultConfig);

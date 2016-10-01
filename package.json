@@ -9,8 +9,10 @@
     "ionic-app-scripts": "./bin/ionic-app-scripts.js"
   },
   "scripts": {
-    "build": "npm run clean && tsc && npm run copy-content && npm run copy-bin",
-    "copy-content": "node ./scripts/copy-content",
+    "build": "npm run clean && tsc && npm run copy-package && npm run copy-content && npm run copy-config && npm run copy-bin",
+    "copy-package": "node ./scripts/copy-package",
+    "copy-content": "cp ./LICENSE ./dist/LICENSE && cp ./README.md ./dist/README.md",
+    "copy-config": "cp -R ./src/config ./dist/config",
     "copy-bin": "node ./scripts/copy-bin",
     "clean": "rm -rf ./dist",
     "test": "node node_modules/.bin/jasmine JASMINE_CONFIG_PATH=src/spec/jasmine.config.json || true",
