@@ -16,13 +16,14 @@
     "ionic-app-scripts": "./bin/ionic-app-scripts.js"
   },
   "scripts": {
-    "build": "npm run clean && tsc",
+    "build": "npm run clean && tsc && npm run prepare-package && npm run copy-bin",
+    "prepare-package": "node ./scripts/copy-package",
+    "copy-bin": "node ./scripts/copy-bin",
     "clean": "rm -rf ./dist",
-    "prepublish": "npm run build",
     "test": "node node_modules/.bin/jasmine JASMINE_CONFIG_PATH=src/spec/jasmine.config.json || true",
     "watch": "npm run clean && tsc --watch"
   },
-  "main": "dist/index.js",
+  "main": "index.js",
   "dependencies": {
     "autoprefixer": "6.4.1",
     "chokidar": "1.6.0",
