@@ -5,19 +5,12 @@
   "homepage": "http//ionicframework.com/",
   "author": "Ionic Team <hi@ionic.io> (http://ionic.io)",
   "license": "MIT",
-  "files": [
-    "bin/",
-    "config/",
-    "dist/",
-    "LICENSE",
-    "README.md"
-  ],
   "bin": {
     "ionic-app-scripts": "./bin/ionic-app-scripts.js"
   },
   "scripts": {
-    "build": "npm run clean && tsc && npm run prepare-package && npm run copy-bin",
-    "prepare-package": "node ./scripts/copy-package",
+    "build": "npm run clean && tsc && npm run copy-content && npm run copy-bin",
+    "copy-content": "node ./scripts/copy-content",
     "copy-bin": "node ./scripts/copy-bin",
     "clean": "rm -rf ./dist",
     "test": "node node_modules/.bin/jasmine JASMINE_CONFIG_PATH=src/spec/jasmine.config.json || true",
