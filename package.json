@@ -39,6 +39,9 @@
     "tslint-eslint-rules": "1.5.0",
     "uglify-js": "2.7.3"
   },
+  "peerDependencies": {
+    "@angular/compiler-cli": "0.6.2"
+  },
   "devDependencies": {
     "@types/clean-css": "3.4.29",
     "@types/fs-extra": "0.0.31",
