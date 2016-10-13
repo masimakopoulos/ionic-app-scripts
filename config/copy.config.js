@@ -24,7 +24,7 @@ module.exports = {
       dest: '{{BUILD}}/polyfills.js'
     },
     {
-      src: 'node_modules/ionicons/dist/fonts/',
+      src: 'node_modules/ionic-angular/fonts/',
       dest: '{{WWW}}/assets/fonts/'
     },
   ]
